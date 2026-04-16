@@ -1,6 +1,5 @@
 import java.util.*;
 
-// ----------- Book Class -----------
 class Book {
     int id;
     String title;
@@ -17,7 +16,6 @@ class Book {
     }
 }
 
-// ----------- Library Class -----------
 class Library {
     private ArrayList<Book> books = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
@@ -38,7 +36,6 @@ class Library {
         System.out.println("✅ Book added successfully!\n");
     }
 
-    // View Books
     void viewBooks() {
         if (books.isEmpty()) {
             System.out.println("No books available.\n");
@@ -55,7 +52,6 @@ class Library {
         System.out.println();
     }
 
-    // Search Book
     void searchBook() {
         sc.nextLine();
         System.out.print("Enter title to search: ");
@@ -77,7 +73,6 @@ class Library {
         }
     }
 
-    // Issue Book
     void issueBook() {
         System.out.print("Enter Book ID to issue: ");
         int id = sc.nextInt();
@@ -103,7 +98,6 @@ class Library {
         System.out.println("❌ Book not found.\n");
     }
 
-    // Return Book
     void returnBook() {
         System.out.print("Enter Book ID to return: ");
         int id = sc.nextInt();
@@ -122,7 +116,7 @@ class Library {
                 int fine = 0;
 
                 if (daysKept > 7) {
-                    fine = (daysKept - 7) * 10; // ₹10 per extra day
+                    fine = (daysKept - 7) * 10; 
                 }
 
                 b.isIssued = false;
@@ -141,7 +135,6 @@ class Library {
     }
 }
 
-// ----------- Main Class -----------
 public class LibrarySystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
